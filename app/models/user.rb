@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   belongs_to :website
-  has_many :error_reports, :foreign_key => 'user_id', :class_name => "Error"
+  has_and_belongs_to_many :issues, join_table: "user_issues"
 
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true

@@ -11,19 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418192644) do
+ActiveRecord::Schema.define(version: 20150422032937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "errors", force: :cascade do |t|
+  create_table "issues", force: :cascade do |t|
     t.text     "description", null: false
-    t.integer  "user_id",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  add_index "errors", ["user_id"], name: "index_errors_on_user_id", using: :btree
 
   create_table "members", force: :cascade do |t|
     t.string   "email",      null: false
@@ -35,15 +32,23 @@ ActiveRecord::Schema.define(version: 20150418192644) do
   add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
 
   create_table "messages", force: :cascade do |t|
-    t.integer  "user_id",    null: false
     t.text     "content",    null: false
-    t.integer  "error_id",   null: false
+    t.integer  "issue_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "messages", ["error_id"], name: "index_messages_on_error_id", using: :btree
-  add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
+  add_index "messages", ["issue_id"], name: "index_messages_on_issue_id", using: :btree
+
+  create_table "user_issues", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "issue_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_issues", ["issue_id"], name: "index_user_issues_on_issue_id", using: :btree
+  add_index "user_issues", ["user_id"], name: "index_user_issues_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",       null: false

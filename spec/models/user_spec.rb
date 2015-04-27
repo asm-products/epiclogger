@@ -34,7 +34,7 @@ describe User do
      end
        
     it "has many errors" do
-      expect(user).to have_many(:error_reports)
+      expect(user).to have_and_belong_to_many(:issues)
      end
        
    end

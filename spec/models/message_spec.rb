@@ -20,18 +20,14 @@ describe Message do
 
 
     it "is invalid without an error" do 
-      expect(message).to validate_presence_of :error
+      expect(message).to validate_presence_of :issue
     end 
 
   end
 
    describe "ActiveRecord associations" do
      it "should belong to an error" do
-      expect(message).to belong_to(:error)
-     end
-
-     it "should delegate user to error" do
-      expect(message).to delegate_method(:user).to(:error)
+      expect(message).to belong_to(:issue)
      end
    end
 

@@ -33,7 +33,7 @@ describe Website do
      end
        
     it "has many errors" do
-      expect(website).to have_many(:error_reports)
+      expect(website).to have_many(:issues)
      end
        
    end
