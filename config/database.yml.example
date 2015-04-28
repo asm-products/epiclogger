@@ -1,0 +1,14 @@
+development:
+    adapter: postgresql
+    encoding: unicode
+    database: epiclogger_dev 
+    pool: 5
+    username: yolo
+    password:
+test:
+    adapter: postgresql
+    encoding: unicode
+    database: epiclogger_test
+    pool: 5
+    username: yolo
+    password:
