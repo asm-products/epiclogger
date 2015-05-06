@@ -1,0 +1,107 @@
+#header
+  .container
+    .row
+      .col-md-6.col-xs-6
+        %h1 Epic Logger
+      .col-md-6.col-xs-6
+        %a.btn.btn-default.pull-right{:href => login_url()} Sign in
+    %h2 Fixing errors while keeping users up to date
+    %p.tagline You’re notified as soon as a solution has been found
+    %a.btn.btn-primary.btn-lg.center-block{:href => signup_url()} START NOW
+#page.container
+  #icons.row
+    .col-md-4
+      %img{:src => asset_path("icon-1.png")}/
+      %h3 Simple &amp; Useful
+      %p A simple, yet useful concept that engages developers with users to solve errors
+    .col-md-4
+      %img{:src => asset_path("icon-2.png")}/
+      %h3 Fast Solutions
+      %p Once we are aware of your issue, we quickly proceed to taking care of it
+    .col-md-4
+      %img{:src => asset_path("icon-3.png")}/
+      %h3 Notifications
+      %p Users are notified as soon as the problem has been solved and a solution was found
+  #copy
+    %h3 Epic Logger is here
+    %p Epic Logger has been created to help users around the world deal with problematic errors on their websites.
+    %p The concept is fairly simple, yet highly efficient, focusing around one of its most cool features which is to notify users and keep them up to date with the progress twards solving their issue.
+#slider
+  .container
+    #carousel.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#carousel"}
+        %li{"data-slide-to" => "1", "data-target" => "#carousel"}
+        %li{"data-slide-to" => "2", "data-target" => "#carousel"}
+      / Wrapper for slides
+      .carousel-inner{:role => "listbox"}
+        .item.active
+          .carousel-caption
+            %h4 Keep your users informed
+            %p Email your users or post a message on your website for them to see
+          %img{:src => asset_path("slides/1.jpg")}/
+        .item
+          .carousel-caption
+            %h4 Keep your users informed
+            %p Email your users or post a message on your website for them to see
+          %img{:src => asset_path("slides/1.jpg")}/
+        .item
+          .carousel-caption
+            %h4 Keep your users informed
+            %p Email your users or post a message on your website for them to see
+          %img{:src => asset_path("slides/1.jpg")}/
+      / Controls
+      %span.left.carousel-control{"data-slide" => "prev", :href => "#carousel", :role => "button"}
+      %span.right.carousel-control{"data-slide" => "next", :href => "#carousel", :role => "button"}
+#testimonial
+  .container
+    %h3 Hear what others have to say
+    %img{:src => asset_path("starkface.png")}/
+    %p
+      %span.name> TONY STARK
+      ,
+      %span.title CEO @ Stark Industries
+    .div
+    %p Epic Logger is amazing! Helped me fix a stupid error on my website very fast! Not to mention I was notified automatically when the solution was found. Awesome professionalism from these guys. And coming from Tony Stark that says a lot, cause I'm awesome myself so I set the bar for awesomeness pretty high.
+#steps
+  .top
+  .container
+    .row
+      #step1.step.col-md-4
+        %img.arrow{:src => asset_path("arrow.png")}/
+        %p
+          Just add a few lines of code
+          %br/
+          that we give you
+      #step2.step.col-md-4
+        %img.arrow{:src => asset_path("arrow.png")}/
+        %p
+          Complete the form with the required info
+          %br/
+          and submit it to us
+      #step3.step.col-md-4
+        %p
+          Relax and we’ll get back to you
+          %br/
+          as soon as we find a solution
+    %h4 It's that simple!
+#social.container
+  %h3 Keep in touch
+  %p We’d love to keep in touch with you! You can keep up to date with our latest news or just say hello
+  %a.facebook{:href => "http://www.facebook.com/"}
+  %a.twitter{:href => "http://www.twitter.com/"}
+#footer
+  .container
+    .row
+      .col-md-5.left
+        %a{:href => "#"} Home
+        %a{:href => "#"} About Us
+        %a{:href => "#"} Blog
+        %a{:href => "#"} Privacy Policy
+      .col-md-7.right
+        %form{:action => "MAILCHIMP_FORM_URL", :method => "post", :target => "_blank"}
+          %label{:for => "email"} Subscribe to our newsletter
+          %input#mce-EMAIL.email{:autocomplete => "off", :name => "EMAIL", :placeholder => "Your e-mail address", :required => "", :type => "email", :value => ""}/
+          %input.btn.btn-primary{:name => "subscribe", :type => "submit", :value => "SUBSCRIBE"}/
+    %p Copyright &copy; Epic Logger #{Time.now.strftime("%Y")}. All rights reserved.

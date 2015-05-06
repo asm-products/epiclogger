@@ -1,0 +1,41 @@
+#header
+  .container
+    .row
+      .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+        %h1
+          %a{:href => root_url()} Epic Logger
+        .panel.panel-default
+          %h3 Sign up for Epic Logger
+          .social
+            %a.btn.btn-default.btn-block{:href => "#"}
+              %span
+              Sign up with Github
+          %span.or or
+          %form{:action => "", :method => "post"}
+            .input-group.username
+              .input-group-addon
+                %span.glyphicon.glyphicon-user
+              %input#username.form-control.input-lg{:placeholder => "Username", :type => "text"}/
+            .input-group.username
+              .input-group-addon @
+              %input#email.form-control.input-lg{:placeholder => "Email address", :type => "email"}/
+            .input-group.username
+              .input-group-addon
+                %span.glyphicon.glyphicon-lock
+              %input#password.form-control.input-lg{:placeholder => "Password", :type => "password"}/
+            .input-group.password
+              .input-group-addon
+                %span.glyphicon.glyphicon-lock
+              %input#password_confirm.form-control.input-lg{:placeholder => "Confirm password", :type => "password_confirm"}/
+            .row
+              .col-md-6
+                .checkbox
+                  %label
+                    %input#remember{:name => "remember", :type => "checkbox"}/
+                    Remember me
+              .col-md-6
+                %button.btn.btn-default.btn-block{:type => "submit"} Sign Up
+          %p.bottom
+            Already have an account?
+            %a{:href => login_url()} Sign in
+    %p.footer Copyright &copy; Epic Logger #{Time.now.strftime("%Y")}. All rights reserved.

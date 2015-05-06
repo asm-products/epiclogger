@@ -1,0 +1,35 @@
+#header
+  .container
+    .row
+      .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+        %h1
+          %a{:href => root_path()} Epic Logger
+        .panel.panel-default
+          %h3 Sign in to your account
+          .social
+            %a.btn.btn-default.btn-block{:href => "#"}
+              %span
+              Log in with Github
+          %span.or or
+          %form{:action => "", :method => "post"}
+            .input-group.username
+              .input-group-addon
+                %span.glyphicon.glyphicon-user
+              %input#username.form-control.input-lg{:placeholder => "Username", :type => "text"}/
+            .input-group.password
+              .input-group-addon
+                %span.glyphicon.glyphicon-lock
+              %input#password.form-control.input-lg{:placeholder => "Password", :type => "password"}/
+            .row
+              .col-md-6
+                .checkbox
+                  %label
+                    %input#remember{:name => "remember", :type => "checkbox"}/
+                    Remember me
+              .col-md-6
+                %button.btn.btn-default.btn-block{:type => "submit"} Sign In
+                %a.forgotpassword{:href => "#"} Forgot your password?
+          %p.bottom
+            No account yet?
+            %a{:href => signup_url()} Sign up
+    %p.footer Copyright &copy; Epic Logger #{Time.now.strftime("%Y")}. All rights reserved.
