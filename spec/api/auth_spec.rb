@@ -24,8 +24,7 @@ describe "Auth API" do
     expect(response).to be_success
 
     json = JSON.parse(response.body)
-    expect(json['message']).to eq("welcome #{member.email}")
+    expect(json).to eq({})
   end
 
 end
-

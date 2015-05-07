@@ -68,6 +68,8 @@ group :development, :test do
 
   gem 'brakeman', :require => false
 
+  # Let's open the emails in browser
+  gem 'letter_opener'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end

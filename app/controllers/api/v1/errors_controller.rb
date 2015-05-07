@@ -1,5 +1,5 @@
-class ErrorsController < ApplicationController
-  before_action :authenticate_api_member!
+class Api::V1::ErrorsController < ApplicationController
+  before_action :authenticate_member!
 
   def index
 
