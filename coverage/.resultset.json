@@ -1,0 +1,337 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/razvanciocanel/Development/epiclogger/config/environment.rb": [
+        null,
+        1,
+        null,
+        null,
+        1
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/application.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/boot.rb": [
+        1,
+        null,
+        1
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/environments/test.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/assets.rb": [
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/backtrace_silencers.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/cookies_serializer.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/devise_token_auth.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/initializers/wrap_parameters.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/config/routes.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/models/member.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/helpers/api/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/models/issue.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/models/message.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/models/user_issue.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/models/user.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/models/website.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/razvanciocanel/Development/epiclogger/app/controllers/api/v1/errors_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1431029807
+  }
+}

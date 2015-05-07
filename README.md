@@ -4,6 +4,7 @@
 [![Dependency Status](https://gemnasium.com/asm-products/epiclogger.svg)](https://gemnasium.com/asm-products/epiclogger)
 [![Code Climate](https://codeclimate.com/github/asm-products/epiclogger/badges/gpa.svg)](https://codeclimate.com/github/asm-products/epiclogger)
 [![Test Coverage](https://codeclimate.com/github/asm-products/epiclogger/badges/coverage.svg)](https://codeclimate.com/github/asm-products/epiclogger/coverage)
+[![Build Status](https://travis-ci.org/asm-products/epiclogger.svg)](https://travis-ci.org/asm-products/epiclogger)
 
 ## EpicLogger engage developers with users to solve errors
 

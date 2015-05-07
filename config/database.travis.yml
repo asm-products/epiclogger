@@ -1,0 +1,5 @@
+test:
+  adapter: postgresql
+  database: epiclogger_test
+  encoding: unicode
+  username: postgres
