@@ -20,7 +20,7 @@ describe "Auth API" do
     expect(response).to be_success
 
 
-    get '/api/v1/home',{}, {"client" => response.headers["client"], "uid" => response.headers["uid"], "access-token"=> response.headers["access-token"], "expiry" => response.headers["expiry"], "token-type" => response.headers["token-type"]}
+    get '/api/v1/errors',{}, {"client" => response.headers["client"], "uid" => response.headers["uid"], "access-token"=> response.headers["access-token"], "expiry" => response.headers["expiry"], "token-type" => response.headers["token-type"]}
     expect(response).to be_success
 
     json = JSON.parse(response.body)

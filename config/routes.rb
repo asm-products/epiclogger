@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new', :as => :signup
   delete 'logout' => 'sessions#destroy', :as => :logout
 
-  namespace :api do
+  namespace :api, defaults: {format: :json} do
     scope :v1 do
       mount_devise_token_auth_for "Member", at: 'auth'
       resources :errors, only: [:create, :index]

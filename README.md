@@ -3,6 +3,7 @@
 <a href="https://assembly.com/epiclogger/bounties?utm_campaign=assemblage&utm_source=epiclogger&utm_medium=repo_badge"><img src="https://asm-badger.herokuapp.com/epiclogger/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
 [![Dependency Status](https://gemnasium.com/asm-products/epiclogger.svg)](https://gemnasium.com/asm-products/epiclogger)
 [![Code Climate](https://codeclimate.com/github/asm-products/epiclogger/badges/gpa.svg)](https://codeclimate.com/github/asm-products/epiclogger)
+[![Test Coverage](https://codeclimate.com/github/asm-products/epiclogger/badges/coverage.svg)](https://codeclimate.com/github/asm-products/epiclogger/coverage)
 
 ## EpicLogger engage developers with users to solve errors
 
