@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'errors/index'
+
+  get 'errors/show'
+
   root 'home#index'
 
   get 'login' => 'sessions#new', :as => :login
