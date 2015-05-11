@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  layout "landing"
+  layout "landing", only: [:new, :create]
+
+  def index
+  end
 
   def new
   end
