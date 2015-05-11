@@ -13,6 +13,7 @@
  */
 
 @import "bootstrap-sprockets";
+@import "font-awesome-sprockets";
 
 /* Modules and Variables */
 @import "bootstrap/variables";
@@ -20,6 +21,7 @@
 
 /* Third-party*/
 @import "bootstrap";
+@import "font-awesome";
 
 /* Components*/
 @import "components/*";

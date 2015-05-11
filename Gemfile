@@ -11,6 +11,7 @@ gem 'enumerize'
 
 # Use bootstrap
 gem 'bootstrap-sass', '~> 3.3.4'
+gem 'font-awesome-sass'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.1'
 # Sprokets

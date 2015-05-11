@@ -12,6 +12,4 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body{:id=>"#{controller.controller_name}-#{controller.action_name}"}
-    = render partial: 'layouts/menu'
-    #maincontainer.container-fluid
-      = yield
+    = yield

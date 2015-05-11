@@ -1,0 +1,239 @@
+html, body {
+  color: #757988;
+  font-size: 16px;
+  line-height: 1.6;
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  color: #313542;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+p {
+  padding: 10px 10px 0 10px;
+}
+
+// html, body {
+//   height: 100%;
+//   font-family: "Roboto", helvetica, arial, sans-serif;
+//   background: #eeeeee;
+// }
+
+// h1, h2, h3, h4 {
+//   font-size: 18px;
+//   color: #262626;
+//   font-weight: 500;
+// }
+
+// strong, label, .table > tbody > tr > th {
+//   font-weight: 500;
+// }
+
+// .badge {
+//   font-size: 11px;
+//   font-weight: 500;
+//   border-radius: 4px;
+// }
+
+// .table > tbody > tr > td {
+//   vertical-align: middle;
+// }
+
+.btn {
+  transition: all 80ms ease-in-out;
+  &.btn-primary {
+    border: none;
+    color: white;
+    background: #1086e0;
+    &:hover {
+      background: #0069b9;
+    }
+  }
+  &:hover {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+  }
+  &.btn-sm {
+    padding: 5px 10px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  span {
+    float: left;
+    margin: 3px 9px 0 0;
+  }
+}
+
+.table > tbody > tr > td > .btn.btn-sm {
+  margin-top: 0;
+}
+
+img.profileimg {
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+}
+
+@media all and (max-width: 992px) {
+  img.profileimg {
+    float: left;
+    height: 32px;
+    width: 32px;
+  }
+}
+
+
+
+
+#sidebar {
+  width: 220px;
+  float: left;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #31334a;
+  color: #8488a0;
+  border-right: 1px solid #1c1f35;
+  .btn {
+    padding: 9px 12px;
+    margin: 0;
+  }
+  #profile {
+    padding: 20px 0 8px 0;
+    text-align: center;
+    border-bottom: 1px solid #1c1f35;
+    img.profileimg {
+      margin: 10px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .links {
+      font-size: 11px;
+      font-weight: 400;
+      padding: 20px 0 5px 0;
+      text-align: center;
+      a {
+        color: #4ec287;
+        text-decoration: none;
+        transition: all 40ms ease-in-out;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+  .selectbox {
+    background: #26293f;
+    color: white;
+    border-bottom: 1px solid #1c1f35;
+    margin-bottom: 40px;
+    cursor: pointer;
+    p {
+      margin: 0;
+      padding: 10px;
+      transition: all 50ms ease-in-out;
+      span {
+        float: right;
+        margin: 2px;
+      }
+      &:hover {
+        color: #4ec287;
+      }
+    }
+    .options {
+      display: none;
+    }
+    &.closed p span {
+      &.closed {
+        display: inline;
+      }
+      &.open {
+        display: none;
+      }
+    }
+    &.open p span {
+      &.closed {
+        display: none;
+      }
+      &.open {
+        display: inline;
+      }
+    }
+  }
+  ul {
+    margin-bottom: 40px;
+    li {
+      a {
+        border-radius: 0;
+        color: #8488a0;
+        background: #31334a;
+        transition: all 50ms ease-in-out;
+        border-top: 1px solid #31334a;
+        border-bottom: 1px solid #31334a;
+        span {
+          font-size: 18px;
+          width: 20px;
+          margin-right: 10px;
+          text-align: center;
+          float: left;
+        }
+      }
+      &.active a, &:hover a {
+        background: #26293f;
+        color: white;
+        border-color: #1c1f35;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 992px) {
+  #sidebar {
+    height: auto;
+    float: none;
+    width: auto;
+    border-bottom: 1px solid #1c1f35;
+    border-right: none;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #sidebar #profile {
+    padding: 10px;
+    height: 50px;
+    border: none;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #sidebar #profile img.profileimg {
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #sidebar #profile p {
+    float: left;
+    padding: 5px 0 0 15px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #sidebar .selectbox {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #1c1f35;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #sidebar ul {
+    margin-bottom: 20px;
+  }
+}

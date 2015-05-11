@@ -1,0 +1,409 @@
+#maincontainer {
+  margin-left: 220px;
+  height: 100%;
+  background: white;
+  > .row {
+    height: 100%;
+  }
+  .sidepanel {
+    background: #eeeeee;
+    border-left: 1px solid #dddddd;
+    height: 100%;
+    padding: 0;
+    color: #333333;
+    h4 {
+      padding: 20px 20px 0 20px;
+      height: 40px;
+      margin: 0;
+    }
+    .panelbox {
+      padding: 0 20px;
+      margin-top: 10px;
+      color: #333333;
+      form, .panel {
+        margin-top: 10px;
+      }
+      form h5, .panel h5 {
+        font-weight: 500;
+        font-size: 12px;
+        margin: 0;
+        background: #eeeeee;
+        padding: 10px;
+      }
+      form h5 span, .panel h5 span {
+        float: right;
+      }
+      form label, .panel label {
+        padding-right: 5px;
+      }
+      form > div, .panel > div {
+        padding: 0 10px;
+      }
+      &.propertybox {
+        border-bottom: 1px solid #cccccc;
+        padding: 10px 5px;
+        margin: 0 15px;
+        p {
+          margin: 0;
+          font-size: 14px;
+          line-height: 1.8;
+          color: #444444;
+          strong {
+            display: block;
+            font-size: 12px;
+            margin-top: 5px;
+            line-height: 0.9;
+            color: black;
+          }
+        }
+        &.faces {
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: block;
+            float: left;
+            margin: 0 2px 2px 0;
+          }
+          span {
+            display: block;
+            clear: both;
+            line-height: 1;
+            font-weight: 500;
+          }
+          p strong {
+            margin-bottom: 2px;
+          }
+        }
+        &.inputs p strong {
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+  .pagecontainer {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &#errorscontainer {
+      padding: 0;
+    }
+    .pagetitle {
+      border-bottom: 1px solid #cccccc;
+      margin-bottom: 10px;
+    }
+    .codeview .codepanel {
+      border: none;
+      margin: 0;
+      border-radius: 0;
+      overflow-x: auto;
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 12px;
+      background: #eeeeee;
+      padding: 5px 0;
+      span.line {
+        white-space: pre;
+        word-break: keep-all;
+        word-wrap: normal;
+        padding: 0 10px;
+        display: block;
+        &.error {
+          display: block;
+          background: #da4141;
+          color: white;
+          padding: 2px 10px;
+          span.char {
+            display: inline-block;
+            border: 1px solid white;
+            border-top: none;
+            margin: -2px 2px;
+            border-bottom: 0;
+            padding: 2px;
+            background: white;
+            color: #da4141;
+          }
+        }
+      }
+    }
+    .tileview .panel-body {
+      padding: 0 10px 10px 10px;
+      .tile {
+        display: block;
+        height: 108px;
+        width: 96px;
+        color: #8d92a0;
+        border-radius: 6px;
+        margin-top: 10px;
+        transition: all 60ms ease-in-out;
+        border: 1px solid white;
+        text-decoration: none;
+        float: left;
+        &:hover {
+          background: #f6f6f6;
+          border-color: #e6e6e6;
+        }
+        img {
+          width: 58px;
+          height: 58px;
+          display: block;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+  #errors {
+    &:before {
+      content: " ";
+      display: block;
+      background: asset-url("line.png") repeat-y 19px 0;
+      height: 25px;
+      margin: 0 10px;
+    }
+    > div {
+      background: asset-url("line.png") repeat-y 29px 0;
+      min-height: 80px;
+      height: 80px;
+      overflow: hidden;
+      margin: 0;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 80ms ease-in-out;
+      &.warning:before, &.error:before {
+        background: #f0ae47;
+        content: " ";
+        display: block;
+        border: 4px solid white;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        float: left;
+        position: relative;
+        top: 18px;
+        margin-right: -20px;
+        transition: all 80ms ease-in-out;
+      }
+      &.warning:before:hover {
+        color: blue;
+      }
+      &.error:before {
+        &:hover {
+          color: blue;
+        }
+        background: #da4141;
+      }
+      &:hover, &.large {
+        background-color: #f9f9f9;
+        box-shadow: 0 0 3px -1px #31334a;
+      }
+      &:hover:before, &.large:before {
+        border-color: #f9f9f9;
+      }
+      .left {
+        width: 150px;
+        margin-left: 15px;
+        float: left;
+      }
+      .right {
+        float: right;
+        width: 140px;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .main {
+        margin: 0 150px 0 170px;
+      }
+      span {
+        display: block;
+        font-size: 16px;
+        transition: all 80ms ease-in-out;
+        &.page {
+          font-weight: 500;
+          padding-left: 16px;
+        }
+        &.events, &.users {
+          font-size: 12px;
+          padding-left: 16px;
+          color: #555555;
+        }
+        &.error {
+          font-weight: 500;
+          height: 22px;
+          min-height: 22px;
+          margin-bottom: 17px;
+          overflow: hidden;
+        }
+        &.language {
+          font-size: 12px;
+          color: #555555;
+        }
+        &.last {
+          font-size: 12px;
+          color: #999999;
+          text-align: center;
+          font-style: italic;
+        }
+        &.date {
+          font-size: 14px;
+          text-align: center;
+        }
+        &.time {
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+    }
+  }
+  #pagination {
+    .side {
+      height: 39px;
+      border-left: 2px solid #cccccc;
+      border-bottom: 2px solid #cccccc;
+      border-radius: 0 0 0 6px;
+      margin-left: 44px;
+    }
+    .buttons {
+      padding-top: 20px;
+      a {
+        text-align: center;
+        span {
+          display: block;
+          margin: 4px 0;
+        }
+      }
+    }
+  }
+  #errordetails {
+    button.btn-primary {
+      margin-left: 10px;
+    }
+    .checkbox {
+      padding: 0;
+      margin: 0;
+    }
+    #activitystream p {
+      padding: 0;
+      margin: 0;
+      height: 40px;
+      overflow: hidden;
+      span {
+        &.time {
+          display: inline-block;
+          float: left;
+          width: 55px;
+          border-right: 2px solid #cccccc;
+          height: 40px;
+          padding: 11px 5px;
+          font-size: 12px;
+          font-weight: 500;
+          color: #666666;
+        }
+        &.activity {
+          display: inline-block;
+          padding: 10px 15px;
+          width: 80%;
+          width: calc(100% - 60px);
+        }
+      }
+      &.resolved span.activity:before, &.error span.activity:before {
+        display: block;
+        content: " ";
+        width: 10px;
+        height: 10px;
+        border: 2px solid white;
+        background: white;
+        border-radius: 8px;
+        float: left;
+        margin-left: -21px;
+        margin-top: 4px;
+        background: #da4141;
+      }
+      &.resolved span.activity:before {
+        background: #5cb85c;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 992px) {
+  #maincontainer {
+    margin: 0;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #maincontainer > .row {
+    height: auto;
+  }
+}
+
+@media all and (max-width: 992px) {
+  #maincontainer .sidepanel {
+    height: auto;
+    padding-bottom: 10px;
+    border-left: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #maincontainer .pagecontainer {
+    border-bottom: 1px solid #dddddd;
+  }
+}
+
+@media (max-width: 768px) {
+  #maincontainer .pagecontainer .tileview .panel-body .tile {
+    width: 88px;
+  }
+}
+
+@media (min-width: 1500px) {
+  #maincontainer .pagecontainer .tileview .panel-body .tile {
+    width: 109px;
+    height: 118px;
+  }
+}
+
+@media (min-width: 1500px) {
+  #maincontainer .pagecontainer .tileview .panel-body .tile img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 15px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #maincontainer #errors > div {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #maincontainer #errors > div .left {
+    width: auto;
+    float: none;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #maincontainer #errors > div .right {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #maincontainer #errors > div .main {
+    margin: 0;
+    padding-left: 30px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #maincontainer #errors > div span {
+    display: inline;
+    padding: 0;
+  }
+}

@@ -1,2 +1,76 @@
-%h1 Errors#index
-%p Find me in app/views/errors/index.html.haml
+.row
+  #errorscontainer.col-lg-9.col-md-8.pagecontainer
+    #errors
+      .warning{:onclick => "loadPage('error');"}
+        .left
+          %span.page Homepage
+          %span.events 21 occurrences
+          %span.users 7 users subscribed
+        .right
+          %span.last Last occurrence
+          %span.date Today, 21:34
+        .main
+          %span.error "jQuery" is undefined
+          %span.language Javascript - app.js 149:12
+      .error{:onclick => "loadPage('error');"}
+        .left
+          %span.page Dashboard
+          %span.events 73 occurrences
+          %span.users 24 users subscribed
+        .right
+          %span.last Last occurrence
+          %span.date Today, 14:07
+        .main
+          %span.error Object doesn’t support property or method “AddEventListener” Object doesn’t support property or method “AddEventListener” Object doesn’t support property or method “AddEventListener” Object doesn’t support property or method “AddEventListener” Object doesn’t support property or method “AddEventListener”
+          %span.language Javascript - app.js 87:4
+    #pagination
+      .row
+        .col-xs-4.side
+        .col-xs-5.buttons
+          %a.btn.btn-default.previous.disabled{:href => "#"}
+            %span.fa.fa-chevron-left
+            1/107  
+          %a.btn.btn-default.next{:href => "#"}
+            %span.fa.fa-chevron-right
+      %br/
+  #filterpanel.col-lg-3.col-md-4.sidepanel
+    %h4 Order by
+    .panelbox
+      .form-group
+        %select#sortinput.form-control{:name => "sortinput"}
+          %option Last occurrence
+          %option Occurrences
+          %option Users subscribed
+          %option Page
+    %h4 Filter
+    #filterbox.panelbox
+      %form.panel.panel-default
+        %h5{"data-target" => "#collapse_page", "data-toggle" => "collapse"}
+          Page
+          %span.fa.fa-chevron-down
+        #collapse_page.collapse
+          .checkbox
+            %label
+              %input{:type => "checkbox", :value => ""}/
+              Homepage
+          .checkbox
+            %label
+              %input{:type => "checkbox", :value => ""}/
+              Dashboard
+          .checkbox
+            %label
+              %input{:type => "checkbox", :value => ""}/
+              Settings
+      %form.panel.panel-default
+        %h5{"data-target" => "#collapse_os", "data-toggle" => "collapse"}
+          Operating Systems
+          %span.open.fa.fa-chevron-down
+        #collapse_os.collapse
+          .checkbox
+            %label
+              %input{:type => "checkbox", :value => ""}/
+              Windows 8
+          .checkbox
+            %label
+              %input{:type => "checkbox", :value => ""}/
+              Windows 7
