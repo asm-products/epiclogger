@@ -160,11 +160,12 @@
       height: 25px;
       margin: 0 10px;
     }
-    > div {
+    > a {
       background: asset-url("line.png") repeat-y 29px 0;
       min-height: 80px;
       height: 80px;
       overflow: hidden;
+      display: block;
       margin: 0;
       padding: 10px 20px;
       cursor: pointer;

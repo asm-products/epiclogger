@@ -13,9 +13,12 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require transparency
+//= require jquery.j-toker
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
 // require jquery.analytics.track
+//= require_tree ./pages
 //= require_tree .

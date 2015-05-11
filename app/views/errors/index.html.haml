@@ -1,7 +1,7 @@
 .row
   #errorscontainer.col-lg-9.col-md-8.pagecontainer
     #errors
-      .warning{:onclick => "loadPage('error');"}
+      %a.warning{:href => errors_url()}
         .left
           %span.page Homepage
           %span.events 21 occurrences
@@ -12,7 +12,7 @@
         .main
           %span.error "jQuery" is undefined
           %span.language Javascript - app.js 149:12
-      .error{:onclick => "loadPage('error');"}
+      %a.error{:href => errors_url()}
         .left
           %span.page Dashboard
           %span.events 73 occurrences

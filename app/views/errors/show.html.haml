@@ -1,2 +1,145 @@
-%h1 Errors#show
-%p Find me in app/views/errors/show.html.haml
+#template
+  %span.greeting
+  %span{"data-bind" => "name"}
+
+#errordetails.row
+  .col-lg-9.col-md-8.pagecontainer
+    .pagetitle
+      %h3 Error #24601
+    %button.btn.btn-primary.pull-right
+      %span.fa.fa-star
+      Assign task
+    %button.btn.btn-primary.pull-right
+      %span.fa.fa-check
+      Mark resolved
+    %button.btn.btn-success.disabled.pull-right
+      %span.fa.fa-check
+      Resolved
+    .clearfix
+    %br/
+    .panel.panel-default.codeview
+      .panel-heading Exception
+      .panel-body
+        %p
+          %strong Expected ")"
+          in app.js 20:33
+        .codepanel
+          %span.line 16. function helloWorld() {
+          %span.line 17.     // Say hello world until the user starts questioning
+          %span.line 18.     // the meaningfulness of their existence.
+          %span.line 19.     for (var i = 42; --i &gt;= 0;) {
+          %span.line.error
+            20. alert('Hello ' + String(world)
+            %span.char ;
+          %span.line 21.     }
+          %span.line 22. }
+    .panel.panel-default
+      .panel-heading Update
+      .panel-body
+        %form
+          .form-group
+            %label{:for => "subscriber_update"} Send an update to 27 subscribers
+            %textarea#subscriber_update.form-control{:rows => "3"}
+          .row
+            .col-md-9.col-xs-7
+              .checkbox
+                %label
+                  %input{:type => "checkbox", :value => ""}/
+                  Notify users by email
+            .col-md-3.col-xs-5
+              %button.btn.btn-primary.pull-right
+                %span.fa.fa-paper-plane
+                Send
+    .panel.panel-default
+      .panel-heading Stream
+      #activitystream
+        %p.resolved
+          %span.time 14:12
+          %span.activity
+            Error marked resolved by
+            %strong woubuc
+        %p.user
+          %span.time 12:52
+          %span.activity Anonymous user subscribed to this error
+        %p.error
+          %span.time 12:52
+          %span.activity
+            Error occured on
+            %strong Homepage
+        %p.error
+          %span.time 12:37
+          %span.activity
+            Error occured on
+            %strong Homepage
+        %p.user
+          %span.time 11:15
+          %span.activity User woubuc subscribed to this error
+        %p.error
+          %span.time 11:14
+          %span.activity
+            Error occured on
+            %strong Homepage
+  .col-lg-3.col-md-4.sidepanel
+    %h4 Details
+    .panelbox.propertybox
+      %p
+        %strong First occurrence:
+        21/04 (two weeks ago)
+      %p
+        %strong Last occurrence:
+        11:18 (one hour ago)
+    .panelbox.propertybox
+      %p
+        %strong Level:
+        Error
+      %p
+        %strong Logger:
+        Javascript
+    .panelbox.propertybox
+      %p
+        %strong Pages:
+        Homepage
+        %span.badge 52
+        %br/
+        Sign Up
+        %span.badge 9
+    .panelbox.propertybox
+      %p
+        %strong Browsers:
+        Google Chrome
+        %span.badge 24
+        %br/
+        Internet Explorer
+        %span.badge 20
+        %br/
+        Mozilla Firefox
+        %span.badge 17
+    .panelbox.propertybox.faces
+      %p
+        %strong Subscribed users:
+        %img{:src => "http://lorempixel.com/48/48/people/1"}/
+        %img{:src => "http://lorempixel.com/48/48/people/2"}/
+        %img{:src => "http://lorempixel.com/48/48/people/3"}/
+        %img{:src => "http://lorempixel.com/48/48/people/4"}/
+        %img{:src => "http://lorempixel.com/48/48/people/5"}/
+        %img{:src => "http://lorempixel.com/48/48/people/6"}/
+        %img{:src => "http://lorempixel.com/48/48/people/7"}/
+        %img{:src => "http://lorempixel.com/48/48/people/6"}/
+        %img{:src => "http://lorempixel.com/48/48/people/7"}/
+        %img{:src => "http://lorempixel.com/48/48/people/8"}/
+        %img{:src => "http://lorempixel.com/48/48/people/9"}/
+        %img{:src => "http://lorempixel.com/48/48/people/10"}/
+        %img{:src => "http://lorempixel.com/48/48/people/1"}/
+        %img{:src => "http://lorempixel.com/48/48/people/7"}/
+        %img{:src => "http://lorempixel.com/48/48/people/6"}/
+        %span + 12 anonymous
+    .panelbox.propertybox.inputs
+      %p
+        %strong Public URL:
+        %input#permalink.form-control.input-sm{:type => "text", :value => "http://epiclogger.io/error/24601"}/
+        %a.btn.btn-primary.btn-sm.btn-block{:href => "#"} Disable public access
+
+:javascript
+  $('#permalink').on('focus', function() {
+    $(this).select();
+  });
