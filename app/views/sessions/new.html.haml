@@ -11,11 +11,11 @@
               %span
               Log in with Github
           %span.or or
-          %form{:action => "", :method => "post"}
+          %form#login{:action => "", :method => "post"}
             .input-group.username
               .input-group-addon
                 %span.glyphicon.glyphicon-user
-              %input#username.form-control.input-lg{:placeholder => "Username", :type => "text"}/
+              %input#email.form-control.input-lg{:placeholder => "Email", :type => "email", :name => 'member_email'}/
             .input-group.password
               .input-group-addon
                 %span.glyphicon.glyphicon-lock

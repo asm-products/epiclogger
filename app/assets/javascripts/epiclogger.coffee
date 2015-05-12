@@ -1,4 +1,4 @@
-$ ->
+$(document).ready ->
   $('#sidebar .selectbox > p').on 'click', (e) ->
     select = $('#sidebar .selectbox');
     if select.hasClass 'open'
@@ -18,6 +18,11 @@ $ ->
 
   $(window).trigger 'resize'
 
-window.setMenu = (menuItem) ->
-  $('#sidebar li.active').removeClass 'active'
-  $('#sidebar li#menu_' + menuItem).addClass 'active'
+  window.setMenu = (menuItem) ->
+    $('#sidebar li.active').removeClass 'active'
+    $('#sidebar li#menu_' + menuItem).addClass 'active'
+
+
+  $.auth.configure({
+    apiUrl: '//epiclogger.dev/api/v1'
+  })

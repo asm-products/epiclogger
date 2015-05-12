@@ -1,0 +1,1 @@
+json.(@member, :id, :email)

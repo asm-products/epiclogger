@@ -1,4 +1,4 @@
-#sessions-new, #users-new{
+#sessions-new, #members-new{
   height: 100%;
   #header {
     min-height: 100%;
@@ -110,7 +110,7 @@
 }
 
 @media (max-width: 992px) {
-  #sessions-new, #users-new{
+  #sessions-new, #members-new{
     #header {
       min-height: 100%;
       height: auto;
@@ -119,7 +119,7 @@
 }
 
 @media (max-width: 992px) {
-  #sessions-new, #users-new{
+  #sessions-new, #members-new{
     #header h1 {
       margin-bottom: 20px;
     }
@@ -127,7 +127,7 @@
 }
 
 @media (max-width: 992px) {
-  #sessions-new, #users-new{
+  #sessions-new, #members-new{
     #header form .checkbox {
       padding: 10px 5px;
     }
@@ -135,7 +135,7 @@
 }
 
 @media (max-width: 992px) {
-  #sessions-new, #users-new{
+  #sessions-new, #members-new{
     #header p.footer {
       position: inherit;
     }

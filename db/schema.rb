@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427041116) do
+ActiveRecord::Schema.define(version: 20150512084631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,10 @@ ActiveRecord::Schema.define(version: 20150427041116) do
     t.text     "description", null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "website_id"
   end
+
+  add_index "issues", ["website_id"], name: "index_issues_on_website_id", using: :btree
 
   create_table "members", force: :cascade do |t|
     t.string   "email",                               null: false
@@ -90,4 +93,5 @@ ActiveRecord::Schema.define(version: 20150427041116) do
 
   add_index "websites", ["member_id"], name: "index_websites_on_member_id", using: :btree
 
+  add_foreign_key "issues", "websites"
 end

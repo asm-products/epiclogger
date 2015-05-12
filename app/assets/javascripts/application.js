@@ -14,6 +14,9 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require transparency
+//= require jquery.cookie
+//= require jquery.deparam
+//= require pubsub
 //= require jquery.j-toker
 //= require bootstrap-sprockets
 //= require turbolinks

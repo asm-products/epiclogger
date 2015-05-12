@@ -9,9 +9,9 @@
     %meta{:content => "Engage developers with users to solve errors", :name => "description"}/
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body{:id=>"#{controller.controller_name}-#{controller.action_name}"}
     = render partial: 'layouts/menu'
     #maincontainer.container-fluid
       = yield
+    = javascript_include_tag 'application', 'data-turbolinks-eval' => false

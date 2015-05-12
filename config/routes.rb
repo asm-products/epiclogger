@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'login' => 'sessions#new', :as => :login
-  get 'signup' => 'users#new', :as => :signup
+  get 'signup' => 'members#new', :as => :signup
   delete 'logout' => 'sessions#destroy', :as => :logout
 
   resources :errors, only: [:show, :index]
+  # resources :members, only: [:index]
   resources :users, only: [:index]
   resources :accounts, only: [:show]
 
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :errors, only: [:create, :index]
       resources :users, only: [:index]
+      resources :members, only: [:show]
     end
   end
 end
