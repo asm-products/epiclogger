@@ -1,7 +1,4 @@
 $ ->
-  PubSub.subscribe('auth', ()->
-    console.log $.auth.user
-  )
   form_login = $('#login')
   form_login.submit((e)->
     e.preventDefault()
@@ -20,5 +17,3 @@ $ ->
 
   )
 
-$(document).ready ->
-  $('.user').render $.auth.user

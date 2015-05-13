@@ -6,7 +6,7 @@
       .col-xs-6
         %a{:href => ""} Account
       .col-xs-6
-        %a.right{:href => "#"} Log out
+        %a.right{:href => "#", :onclick => 'EpicLogger.logout()'} Log out
     %button.btn.btn-primary.fa.fa-bars.visible-sm.visible-xs.pull-right{"data-toggle" => "collapse", :href => "#collapse_menu"}
   #collapse_menu.collapse.in
     .selectbox.closed
