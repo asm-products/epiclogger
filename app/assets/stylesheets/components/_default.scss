@@ -27,6 +27,28 @@ p {
 //   font-weight: 500;
 // }
 
+
+
+[j\:cloak], [j-cloak], [data-j-cloak], [x-j-cloak], .j-cloak, .x-j-cloak {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99999;
+
+  &:before {
+    content: "Loading...";
+    padding-top: 25%;
+    color: #757988;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+  }
+}
+
+
 strong, label, .table > tbody > tr > th {
   font-weight: 500;
 }

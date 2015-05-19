@@ -23,6 +23,12 @@ window.EpicLogger = (->
   logout: ->
     $.auth.signOut()
 
+  doLoad: ->
+    $('.loading').addClass('j-cloak')
+
+  doneLoad: ->
+    $('.loading').removeClass('j-cloak')
+
   authInitialization: ->
     $.auth.configure({
       apiUrl: '/api/v1'
@@ -31,9 +37,12 @@ window.EpicLogger = (->
     PubSub.subscribe('auth', (ev, msg)->
       if ev == 'auth.validation.success'
         console.log "success boss good"
+        EpicLogger.doneLoad()
       else if ev == 'auth.validation.error'
-        # current_path = window.location.href
-        window.location.href = '/login'
+        current_path = window.location.pathname
+        console.log current_path
+        if current_path not in ['/login', '/signup', '/']
+          window.location.href = '/login'
       console.log ev
       console.log msg
       # console.log $.auth.user

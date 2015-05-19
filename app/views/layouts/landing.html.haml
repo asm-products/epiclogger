@@ -8,6 +8,7 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %meta{:content => "Engage developers with users to solve errors", :name => "description"}/
 
+    = include_gon
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body{:id=>"#{controller.controller_name}-#{controller.action_name}"}

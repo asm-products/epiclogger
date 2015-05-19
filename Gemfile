@@ -30,6 +30,7 @@ gem 'devise_token_auth', '0.1.32.beta9'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'gon'
 gem 'jquery-turbolinks'
 gem 'nprogress-rails' # loading for turbolinks
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

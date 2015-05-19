@@ -111,6 +111,11 @@ GEM
       sass (~> 3.2)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gon (5.2.3)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     haml (4.0.6)
       tilt
     haml-rails (0.9.0)
@@ -199,6 +204,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    request_store (1.1.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rspec-core (3.2.3)
@@ -290,6 +296,7 @@ DEPENDENCIES
   factory_girl_rails
   figaro
   font-awesome-sass
+  gon
   haml-rails
   heroku-deflater
   jbuilder (~> 2.0)
