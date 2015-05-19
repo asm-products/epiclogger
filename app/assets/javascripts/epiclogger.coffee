@@ -30,13 +30,17 @@ window.EpicLogger = (->
     $('.loading').removeClass('j-cloak')
 
   authInitialization: ->
+    $.ajaxSetup(
+      beforeSend: (xhr, settings) ->
+        # append outbound auth headers
+        $.auth.appendAuthHeaders(xhr, settings)
+    )
     $.auth.configure({
       apiUrl: '/api/v1'
     })
     PubSub.clearAllSubscriptions()
     PubSub.subscribe('auth', (ev, msg)->
       if ev == 'auth.validation.success'
-        console.log "success boss good"
         EpicLogger.doneLoad()
       else if ev == 'auth.validation.error'
         current_path = window.location.pathname
