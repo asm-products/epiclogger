@@ -28,6 +28,8 @@ gem 'devise_token_auth', '0.1.32.beta9'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'react-rails'
+gem 'sprockets-coffee-react'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'gon'

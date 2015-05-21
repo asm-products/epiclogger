@@ -38,4 +38,6 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :letter_opener
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.react.variant = :development
 end
