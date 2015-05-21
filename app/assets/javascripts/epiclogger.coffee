@@ -1,4 +1,7 @@
 window.EpicLogger = (->
+  pickedWebsite = undefined
+  memberWebsites = undefined
+
   menuResize: ->
     $(window).on 'resize', ->
     if $(window).width() <= 992
@@ -29,6 +32,46 @@ window.EpicLogger = (->
   doneLoad: ->
     $('.loading').removeClass('j-cloak')
 
+  pickWebsite: (el)->
+    website_id = parseInt $(el).data('id')
+    for website in memberWebsites
+      if website.id==website_id
+        pickedWebsite = website
+        PubSub.publishSync('assigned.website', pickedWebsite)
+        false
+
+  setMemberDetails: ->
+    $.getJSON('/api/v1/websites', (data)->
+      pickedWebsite = data.websites[0]
+      memberWebsites = data.websites
+      PubSub.publish('assigned.website', pickedWebsite)
+      PubSub.publish('details.websites', data );
+
+      $('.picked-website').render pickedWebsite
+
+      directive = {
+        title: {
+          'data-id': ()->
+            this.id
+        }
+      }
+      $('#websites-sidebar').render data.websites, directive
+    )
+
+  renderMember: ->
+    userDirectives = {
+      name: {
+        html: ->
+          "Hello, #{this.name}"
+      }
+    }
+    $('.user-sidebar').render $.auth.user, userDirectives
+
+  isPage: (page)->
+    current_path = window.location.pathname
+    return true if current_path == "/#{page}"
+    return false
+
   authInitialization: ->
     $.ajaxSetup(
       beforeSend: (xhr, settings) ->
@@ -38,10 +81,11 @@ window.EpicLogger = (->
     $.auth.configure({
       apiUrl: '/api/v1'
     })
-    PubSub.clearAllSubscriptions()
     PubSub.subscribe('auth', (ev, msg)->
       if ev == 'auth.validation.success'
         EpicLogger.doneLoad()
+        EpicLogger.setMemberDetails()
+        EpicLogger.renderMember()
       else if ev == 'auth.validation.error'
         current_path = window.location.pathname
         console.log current_path
@@ -55,9 +99,12 @@ window.EpicLogger = (->
 
   initMain: ->
     $(document).ready ->
+      PubSub.clearAllSubscriptions()
+
       EpicLogger.menuResize()
       EpicLogger.sidebarToggle()
       EpicLogger.authInitialization()
+
       return
     return
 

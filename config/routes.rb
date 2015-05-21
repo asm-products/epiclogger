@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       resources :errors, only: [:create, :index]
       resources :users, only: [:index]
       resources :members, only: [:show]
+      resources :websites, only: [:index]
     end
   end
 end

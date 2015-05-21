@@ -16,8 +16,9 @@ $ ->
           moment(this.last_occurrence).calendar()
     }
   }
-  PubSub.subscribe('auth.validation.success', (ev, msg)->
-    $.getJSON('/api/v1/errors', {website_id: 1}, (data)->
+  PubSub.subscribe('assigned.website', (ev, website)->
+    console.log 'getting errors'
+    $.getJSON('/api/v1/errors', {website_id: website.id}, (data)->
       $('#errorscontainer').render data, directive
     )
   )

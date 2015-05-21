@@ -17,3 +17,5 @@
     #maincontainer.container-fluid
       = yield
     = javascript_include_tag 'application', 'data-turbolinks-eval' => false
+    - if Rails.application.assets.find_asset("pages/#{controller.controller_name}")
+      = javascript_include_tag "pages/#{controller.controller_name}", 'data-turbolinks-eval' => false

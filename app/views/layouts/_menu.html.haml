@@ -1,7 +1,7 @@
 #sidebar
-  #profile
+  #profile.user-sidebar
     %img.profileimg{:src => "http://0.gravatar.com/avatar/59b762ebf3d116bf806bcfa3fa12e65f"}/
-    %p Hello, woubuc
+    %p.name Hello, woubuc
     .row.links.hidden-sm.hidden-xs
       .col-xs-6
         %a{:href => ""} Account
@@ -10,14 +10,12 @@
     %button.btn.btn-primary.fa.fa-bars.visible-sm.visible-xs.pull-right{"data-toggle" => "collapse", :href => "#collapse_menu"}
   #collapse_menu.collapse.in
     .selectbox.closed
-      %p
-        Site Name
+      %p.picked-website
+        %strong.title Current Site Name
         %span.closed.fa.fa-chevron-down
         %span.open.fa.fa-chevron-up
-      .options
-        %p Another site
-        %p Yet another site
-        %p Did I mention this is the list of this user's sites?
+      #websites-sidebar.options
+        %p.title{onclick: 'EpicLogger.pickWebsite(this)', 'data-id'=> ""} Another site
     %ul.nav.nav-pills.nav-stacked
       %li#menu_errors
         %a{:href => errors_url()}
