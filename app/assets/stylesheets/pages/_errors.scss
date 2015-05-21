@@ -218,11 +218,11 @@
         display: block;
         font-size: 16px;
         transition: all 80ms ease-in-out;
-        &.page {
+        &.page_title {
           font-weight: 500;
           padding-left: 16px;
         }
-        &.events, &.users {
+        &.occurrences, &.users_count {
           font-size: 12px;
           padding-left: 16px;
           color: #555555;
@@ -244,7 +244,7 @@
           text-align: center;
           font-style: italic;
         }
-        &.date {
+        &.last_occurrence {
           font-size: 14px;
           text-align: center;
         }

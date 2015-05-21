@@ -21,6 +21,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require js-routes
+//= require moment
 //= require nprogress
 //= require nprogress-turbolinks
 // require jquery.analytics.track

@@ -159,6 +159,8 @@ GEM
     mime-types (2.5)
     mini_portile (0.6.2)
     minitest (5.6.1)
+    momentjs-rails (2.10.2)
+      railties (>= 3.1)
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -307,6 +309,7 @@ DEPENDENCIES
   jquery-turbolinks
   js-routes
   letter_opener
+  momentjs-rails
   nprogress-rails
   pg
   pry
