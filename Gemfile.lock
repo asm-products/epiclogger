@@ -143,6 +143,9 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
+    js-routes (1.0.1)
+      railties (>= 3.2)
+      sprockets-rails
     json (1.8.2)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -302,6 +305,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  js-routes
   letter_opener
   nprogress-rails
   pg

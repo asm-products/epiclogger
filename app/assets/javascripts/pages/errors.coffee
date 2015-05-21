@@ -3,7 +3,7 @@ $ ->
     errors:{
       warning: {
         href: (params) ->
-          params.value + "/" + this.id
+          Routes.error_path(this.id)
       }
     }
   }

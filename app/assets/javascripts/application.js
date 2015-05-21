@@ -20,6 +20,7 @@
 //= require jquery.j-toker
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require js-routes
 //= require nprogress
 //= require nprogress-turbolinks
 // require jquery.analytics.track
