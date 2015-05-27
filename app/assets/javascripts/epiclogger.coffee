@@ -32,22 +32,27 @@ window.EpicLogger = (->
   doneLoad: ->
     $('.loading').removeClass('j-cloak')
 
-  pickWebsite: (el)->
-    website_id = parseInt $(el).data('id')
+  pickWebsite: (el, website_id)->
+    # we check to see if we are calling this from a link call
+    if el!=undefined
+      website_id = $(el).data('id')
+    # let's find the website_id in the websites from the database
     for website in memberWebsites
-      if website.id==website_id
+      if website.id==parseInt(website_id)
         pickedWebsite = website
         PubSub.publishSync('assigned.website', pickedWebsite)
+        $('.picked-website').render pickedWebsite # render the current website
+        $.cookie('pickedWebsite', website.id) # save the website id in the cookies
         false
 
   setMemberDetails: ->
     $.getJSON('/api/v1/websites', (data)->
-      pickedWebsite = data.websites[0]
       memberWebsites = data.websites
-      PubSub.publish('assigned.website', pickedWebsite)
+      if $.cookie('pickedWebsite')!=undefined
+        EpicLogger.pickWebsite(undefined, $.cookie('pickedWebsite'))
+      else
+        EpicLogger.pickWebsite(undefined, data.websites[0].id)
       PubSub.publish('details.websites', data );
-
-      $('.picked-website').render pickedWebsite
 
       directive = {
         title: {

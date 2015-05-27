@@ -8,41 +8,17 @@
     .clearfix
     %br/
     .panel.panel-default
-      %table.table
-        %tr
-          %th Username
-          %th Email
-          %th Role
-          %th
-        %tr
-          %td woubuc
-          %td woubuc@example.com
-          %td Owner
-          %td
-            %button.btn.btn-danger.btn-sm.pull-right
-              %span.fa.fa-close
-              Remove user
-        %tr
-          %td woubuc
-          %td woubuc@example.com
-          %td User
-          %td
-            %button.btn.btn-danger.btn-sm.pull-right
-              %span.fa.fa-close
-              Remove user
-        %tr
-          %td woubuc
-          %td woubuc@example.com
-          %td User
-          %td
-            %button.btn.btn-danger.btn-sm.pull-right
-              %span.fa.fa-close
-              Remove user
-        %tr
-          %td woubuc
-          %td woubuc@example.com
-          %td Almighty Overlord
-          %td
-            %button.btn.btn-danger.btn-sm.pull-right
-              %span.fa.fa-close
-              Remove user
+      %table.table#userscontainer
+        %thead
+          %tr
+            %th Username
+            %th Email
+            %th
+        %tbody.users
+          %tr
+            %td.name woubuc
+            %td.email woubuc@example.com
+            %td
+              %button.btn.btn-danger.btn-sm.pull-right
+                %span.fa.fa-close
+                Remove user

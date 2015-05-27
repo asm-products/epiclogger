@@ -1,4 +1,5 @@
 $ ->
+  console.log "errors loaded"
   directive = {
     errors:{
       warning: {
