@@ -100,6 +100,8 @@ window.EpicLogger = (->
         console.log current_path
         if current_path not in ['/login', '/signup', '/']
           window.location.href = '/login'
+      else if ev == 'auth.signOut.success'
+        window.location.href = '/login'
       console.log ev
       console.log msg
       # console.log $.auth.user
