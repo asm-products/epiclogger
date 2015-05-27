@@ -40,7 +40,7 @@ window.EpicLogger = (->
     for website in memberWebsites
       if website.id==parseInt(website_id)
         pickedWebsite = website
-        PubSub.publishSync('assigned.website', pickedWebsite)
+        PubSub.publish('assigned.website', pickedWebsite)
         $('.picked-website').render pickedWebsite # render the current website
         $.cookie('pickedWebsite', website.id) # save the website id in the cookies
         false

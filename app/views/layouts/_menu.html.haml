@@ -17,19 +17,10 @@
       #websites-sidebar.options
         %p.title{onclick: 'EpicLogger.pickWebsite(this)', 'data-id'=> ""} Another site
     %ul.nav.nav-pills.nav-stacked
-      %li#menu_errors
-        %a{:href => errors_url()}
-          %span.fa.fa-exclamation-triangle
-          Errors
-      -# %li#menu_tasks
-      -#   %a{:href => "#"}
-      -#     %span.fa.fa-star
-      -#     Tasks
-      %li#menu_users
-        %a{:href => users_url()}
-          %span.fa.fa-users
-          Users
+      = nav_link "Errors", errors_url(), {}, 'exclamation-triangle'
+      = nav_link "Users", users_url(), {}, 'users'
     %ul.nav.nav-pills.nav-stacked
+      -# = nav_link "Installation", instalation_url(), {}, 'exclamation-triangle'
       %li#menu_installation
         %a{:href => "#"}
           %span.fa.fa-code
