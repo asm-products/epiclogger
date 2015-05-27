@@ -71,6 +71,9 @@ window.EpicLogger = (->
           "Hello, #{this.name}"
       }
     }
+    $helpfulLink = $('.helpful-link')
+    $helpfulLink.attr('data-helpful-email', $.auth.user.email)
+    $helpfulLink.attr('data-helpful-name', $.auth.user.name)
     $('.user-sidebar').render $.auth.user, userDirectives
 
   isPage: (page)->

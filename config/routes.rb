@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :accounts, only: [:show]
   resources :installations, only: [:show, :index]
+  resources :settings, only: [:index]
 
   mount_devise_token_auth_for "Member", at: 'api/v1/auth'
   namespace :api, defaults: {format: :json} do

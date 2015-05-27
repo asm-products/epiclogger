@@ -21,10 +21,7 @@
       = nav_link "Users", users_url(), {}, 'users'
     %ul.nav.nav-pills.nav-stacked
       = nav_link "Installation", installations_url(), {}, 'code'
-      %li#menu_settings
-        %a{:href => "#"}
-          %span.fa.fa-cog
-          Site Settings
+      = nav_link "Website Settings", settings_url(), {}, 'cog'
     %ul.nav.nav-pills.nav-stacked.hidden-md.hidden-lg
       %li#menu_account
         %a{:href => "#"}
@@ -35,7 +32,4 @@
           %span.fa.fa-sign-out
           Log out
     %ul.nav.nav-pills.nav-stacked
-      %li#menu_help
-        %a{:href => "#"}
-          %span.fa.fa-question
-          Help
+      = nav_link "Help", 'mailto:info@epiclogger.com', {'data-helpful'=>'EpicLogger','data-helpful-modal'=>"on", :class=>'helpful-link'}, 'question'

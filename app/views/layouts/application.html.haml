@@ -11,6 +11,7 @@
     = include_gon
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-eval' => false
+    %script{:async => "", :src => "https://assets.helpful.io/assets/widget.js"}
 
     = csrf_meta_tags
   %body{:id=>"#{controller.controller_name}-#{controller.action_name}"}
