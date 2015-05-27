@@ -1,0 +1,50 @@
+#installation.row
+  .col-md-12.pagecontainer
+    .pagetitle
+      %h3 Installation and configuration
+    .panel.panel-default.codeview
+      .panel-heading Client Configuration
+      .panel-body
+        %p To start sending events, configure your client with the following DSN value:
+        .codepanel
+          %span.line https://451cf228845b497b919281b158209a59:157cbe7bf9d34b67b906dea4d3e849d0@app.feedbacker.com/12798
+        %br/
+        %p If this is a client that only needs public access (like raven-js), you can use the following public DSN:
+        .codepanel
+          %span.line https://3291842f716643f2968b11e3c86113f9@app.feedbacker.com/12798
+    .panel.panel-default.tileview
+      .panel-heading Platforms
+      .panel-body
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_ruby.png")}/
+          %span Ruby
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_javascript.png")}/
+          %span Javascript
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_nodejs.png")}/
+          %span Node.JS
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_python.png")}/
+          %span Python
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_php.png")}/
+          %span PHP
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_java.png")}/
+          %span Java
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_ios.png")}/
+          %span iOS
+    .panel.panel-default.tileview
+      .panel-heading Frameworks
+      .panel-body
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_rails.png")}/
+          %span Rails 3
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_rails.png")}/
+          %span Rails 4
+        %a.tile.text-center{:href => "#"}
+          %img{:src => image_path("icon_django.png")}/
+          %span Django

@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root 'home#index'
 
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
   # resources :members, only: [:index]
   resources :users, only: [:index]
   resources :accounts, only: [:show]
+  resources :installations, only: [:show, :index]
 
   mount_devise_token_auth_for "Member", at: 'api/v1/auth'
   namespace :api, defaults: {format: :json} do

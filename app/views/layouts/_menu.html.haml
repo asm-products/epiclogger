@@ -20,11 +20,7 @@
       = nav_link "Errors", errors_url(), {}, 'exclamation-triangle'
       = nav_link "Users", users_url(), {}, 'users'
     %ul.nav.nav-pills.nav-stacked
-      -# = nav_link "Installation", instalation_url(), {}, 'exclamation-triangle'
-      %li#menu_installation
-        %a{:href => "#"}
-          %span.fa.fa-code
-          Installation
+      = nav_link "Installation", installations_url(), {}, 'code'
       %li#menu_settings
         %a{:href => "#"}
           %span.fa.fa-cog
