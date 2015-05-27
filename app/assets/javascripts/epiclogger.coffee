@@ -40,7 +40,8 @@ window.EpicLogger = (->
     for website in memberWebsites
       if website.id==parseInt(website_id)
         pickedWebsite = website
-        PubSub.publish('assigned.website', pickedWebsite)
+        console.log 'assigned website'
+        PubSub.publishSync('assigned.website', pickedWebsite)
         $('.picked-website').render pickedWebsite # render the current website
         $.cookie('pickedWebsite', website.id) # save the website id in the cookies
         false
@@ -103,9 +104,10 @@ window.EpicLogger = (->
     # $('.user').render $.auth.user
 
   initMain: ->
-    $(document).ready ->
+    $(document).on("page:before-change", ->
       PubSub.clearAllSubscriptions()
-
+    )
+    $(document).ready ->
       EpicLogger.menuResize()
       EpicLogger.sidebarToggle()
       EpicLogger.authInitialization()
