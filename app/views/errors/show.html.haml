@@ -1,4 +1,4 @@
-#errordetails.row
+#errordetails.row.error
   .col-lg-9.col-md-8.pagecontainer
     .pagetitle
       %h3 Error #24601
@@ -13,22 +13,22 @@
       Resolved
     .clearfix
     %br/
-    .panel.panel-default.codeview
-      .panel-heading Exception
-      .panel-body
-        %p
-          %strong Expected ")"
-          in app.js 20:33
-        .codepanel
-          %span.line 16. function helloWorld() {
-          %span.line 17.     // Say hello world until the user starts questioning
-          %span.line 18.     // the meaningfulness of their existence.
-          %span.line 19.     for (var i = 42; --i &gt;= 0;) {
-          %span.line.error
-            20. alert('Hello ' + String(world)
-            %span.char ;
-          %span.line 21.     }
-          %span.line 22. }
+    / .panel.panel-default.codeview
+    /   .panel-heading Exception
+    /   .panel-body
+    /     %p
+    /       %strong Expected ")"
+    /       in app.js 20:33
+    /     .codepanel
+    /       %span.line 16. function helloWorld() {
+    /       %span.line 17.     // Say hello world until the user starts questioning
+    /       %span.line 18.     // the meaningfulness of their existence.
+    /       %span.line 19.     for (var i = 42; --i &gt;= 0;) {
+    /       %span.line.error
+    /         20. alert('Hello ' + String(world)
+    /         %span.char ;
+    /       %span.line 21.     }
+    /       %span.line 22. }
     .panel.panel-default
       .panel-heading Update
       .panel-body
@@ -80,36 +80,36 @@
     .panelbox.propertybox
       %p
         %strong First occurrence:
-        21/04 (two weeks ago)
+        .created_at 21/04 (two weeks ago)
       %p
         %strong Last occurrence:
-        11:18 (one hour ago)
-    .panelbox.propertybox
-      %p
-        %strong Level:
-        Error
-      %p
-        %strong Logger:
-        Javascript
-    .panelbox.propertybox
-      %p
-        %strong Pages:
-        Homepage
-        %span.badge 52
-        %br/
-        Sign Up
-        %span.badge 9
-    .panelbox.propertybox
-      %p
-        %strong Browsers:
-        Google Chrome
-        %span.badge 24
-        %br/
-        Internet Explorer
-        %span.badge 20
-        %br/
-        Mozilla Firefox
-        %span.badge 17
+        .last_occurrence 11:18 (one hour ago)
+    / .panelbox.propertybox
+    /   %p
+    /     %strong Level:
+    /     Error
+    /   %p
+    /     %strong Logger:
+    /     Javascript
+    / .panelbox.propertybox
+    /   %p
+    /     %strong Pages:
+    /     Homepage
+    /     %span.badge 52
+    /     %br/
+    /     Sign Up
+    /     %span.badge 9
+    / .panelbox.propertybox
+    /   %p
+    /     %strong Browsers:
+    /     Google Chrome
+    /     %span.badge 24
+    /     %br/
+    /     Internet Explorer
+    /     %span.badge 20
+    /     %br/
+    /     Mozilla Firefox
+    /     %span.badge 17
     .panelbox.propertybox.faces
       %p
         %strong Subscribed users:
@@ -129,11 +129,11 @@
         %img{:src => "http://lorempixel.com/48/48/people/7"}/
         %img{:src => "http://lorempixel.com/48/48/people/6"}/
         %span + 12 anonymous
-    .panelbox.propertybox.inputs
-      %p
-        %strong Public URL:
-        %input#permalink.form-control.input-sm{:type => "text", :value => "http://epiclogger.io/error/24601"}/
-        %a.btn.btn-primary.btn-sm.btn-block{:href => "#"} Disable public access
+    / .panelbox.propertybox.inputs
+    /   %p
+    /     %strong Public URL:
+    /     %input#permalink.form-control.input-sm{:type => "text", :value => "http://epiclogger.io/error/24601"}/
+    /     %a.btn.btn-primary.btn-sm.btn-block{:href => "#"} Disable public access
 
 :javascript
   $('#permalink').on('focus', function() {

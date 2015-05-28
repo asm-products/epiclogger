@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521103001) do
+ActiveRecord::Schema.define(version: 20150528180341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150521103001) do
     t.string   "page_title"
     t.integer  "occurrences"
     t.datetime "last_occurrence"
+    t.integer  "status"
   end
 
   add_index "issues", ["website_id"], name: "index_issues_on_website_id", using: :btree

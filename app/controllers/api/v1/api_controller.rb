@@ -12,10 +12,9 @@ class Api::V1::ApiController < ActionController::Base
   end
 
   def current_site
-    # if params[:site_id] && user_signed_in?
-    #   @current_site ||= current_user.sites.where("site.id = ?", params[:site_id]).try(:first)
-    # end
-    Website.find(params[:website_id])
+    if params[:website_id] && current_member
+      @current_site ||= current_member.websites.where("websites.id = ?", params[:website_id]).try(:first)
+    end
   end
 
   protected

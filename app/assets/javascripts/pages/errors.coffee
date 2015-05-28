@@ -15,11 +15,22 @@ directive = {
     last_occurrence:
       html: ()->
         moment(this.last_occurrence).calendar()
-  }
+  },
+  created_at:
+    html: ()->
+      moment(this.created_at).calendar()
+  last_occurrence:
+    html: ()->
+      moment(this.last_occurrence).calendar()
 }
 PubSub.subscribe('assigned.website', (ev, website)->
   console.log 'getting errors'
-  $.getJSON('/api/v1/errors', {website_id: website.id}, (data)->
-    $('#errorscontainer').render data, directive
-  )
+
+  switch gon.action
+    when "index"
+      $.getJSON '/api/v1/errors', { website_id: website.id }, (data) ->
+        $('#errorscontainer').render data, directive
+    when 'show'
+      $.getJSON '/api/v1/errors/' + gon.error_id, { website_id: website.id }, (data) ->
+        $('#errordetails').render data, directive
 )
