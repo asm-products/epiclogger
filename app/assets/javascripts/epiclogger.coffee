@@ -81,6 +81,18 @@ window.EpicLogger = (->
     return true if current_path == "/#{page}"
     return false
 
+  # -------------------------------------
+  # some simple method that adds error message
+  # -------------------------------------
+  addAlert: (msg,type='error')->
+    if $.isPlainObject(msg)
+      html = "<ul>"
+      for index,elem of msg
+        html+= "<li>#{index.replace(/_/g,' ')}: #{elem[0]}</li>"
+      html+="</ul>"
+      msg = html
+    alert(msg)
+
   authInitialization: ->
     $.ajaxSetup(
       beforeSend: (xhr, settings) ->

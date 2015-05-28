@@ -1,5 +1,6 @@
 class Api::V1::ApiController < ActionController::Base
   include DeviseTokenAuth::Concerns::SetUserByToken
+  before_action :configure_permitted_parameters, if: :devise_controller?
   layout nil
   before_action :authenticate_member!
 
@@ -15,5 +16,16 @@ class Api::V1::ApiController < ActionController::Base
     #   @current_site ||= current_user.sites.where("site.id = ?", params[:site_id]).try(:first)
     # end
     Website.find(params[:website_id])
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :confirm_success_url) }
+
+    devise_parameter_sanitizer.for(:sign_up) << :name
+    devise_parameter_sanitizer.for(:sign_up) << :confirm_success_url
+    # devise_parameter_sanitizer.for(:account_update) << :operating_thetan
+    # devise_parameter_sanitizer.for(:account_update) << :favorite_color
   end
 end
