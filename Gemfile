@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
 
 gem 'devise_token_auth', '>= 0.1.32.beta9'
+gem 'omniauth-github'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

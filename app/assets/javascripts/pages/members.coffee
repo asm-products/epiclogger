@@ -1,4 +1,7 @@
 console.log "members loaded"
+$('.signup-github').on('click', ()->
+  $.auth.oAuthSignIn({provider: 'github'})
+)
 form_signup = $('#signup')
 form_signup.submit((e)->
   e.preventDefault()

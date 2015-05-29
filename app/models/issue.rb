@@ -1,4 +1,5 @@
 class Issue < ActiveRecord::Base
+  extend Enumerize
   has_many :messages
   has_and_belongs_to_many :users, join_table: "user_issues"
   belongs_to :website
