@@ -22,6 +22,9 @@ directive = {
   last_occurrence:
     html: ()->
       moment(this.last_occurrence).calendar()
+  subscribers_count:
+    html: ()->
+      "Send an update to #{this.subscribers_count} subscribers"
 }
 PubSub.subscribe('assigned.website', (ev, website)->
   console.log 'getting errors'

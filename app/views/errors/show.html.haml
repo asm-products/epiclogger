@@ -2,10 +2,10 @@
   .col-lg-9.col-md-8.pagecontainer
     .pagetitle
       %h3 Error #24601
-    %button.btn.btn-primary.pull-right
-      %span.fa.fa-star
-      Assign task
-    %button.btn.btn-primary.pull-right
+    / %button.btn.btn-primary.pull-right
+    /   %span.fa.fa-star
+    /   Assign task
+    %button.btn.btn-primary.pull-right.resolved
       %span.fa.fa-check
       Mark resolved
     %button.btn.btn-success.disabled.pull-right
@@ -34,7 +34,7 @@
       .panel-body
         %form
           .form-group
-            %label{:for => "subscriber_update"} Send an update to 27 subscribers
+            %label.subscribers_count{:for => "subscriber_update"}
             %textarea#subscriber_update.form-control{:rows => "3"}
           .row
             .col-md-9.col-xs-7
@@ -113,22 +113,9 @@
     .panelbox.propertybox.faces
       %p
         %strong Subscribed users:
-        %img{:src => "http://lorempixel.com/48/48/people/1"}/
-        %img{:src => "http://lorempixel.com/48/48/people/2"}/
-        %img{:src => "http://lorempixel.com/48/48/people/3"}/
-        %img{:src => "http://lorempixel.com/48/48/people/4"}/
-        %img{:src => "http://lorempixel.com/48/48/people/5"}/
-        %img{:src => "http://lorempixel.com/48/48/people/6"}/
-        %img{:src => "http://lorempixel.com/48/48/people/7"}/
-        %img{:src => "http://lorempixel.com/48/48/people/6"}/
-        %img{:src => "http://lorempixel.com/48/48/people/7"}/
-        %img{:src => "http://lorempixel.com/48/48/people/8"}/
-        %img{:src => "http://lorempixel.com/48/48/people/9"}/
-        %img{:src => "http://lorempixel.com/48/48/people/10"}/
-        %img{:src => "http://lorempixel.com/48/48/people/1"}/
-        %img{:src => "http://lorempixel.com/48/48/people/7"}/
-        %img{:src => "http://lorempixel.com/48/48/people/6"}/
-        %span + 12 anonymous
+        %p.subscribers
+          %img{:src => "http://lorempixel.com/48/48/people/1"}/
+        / %span + 12 anonymous
     / .panelbox.propertybox.inputs
     /   %p
     /     %strong Public URL:
