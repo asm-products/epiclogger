@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150528180341) do
+ActiveRecord::Schema.define(version: 20150605162303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,17 +68,17 @@ ActiveRecord::Schema.define(version: 20150528180341) do
 
   add_index "messages", ["issue_id"], name: "index_messages_on_issue_id", using: :btree
 
-  create_table "user_issues", force: :cascade do |t|
-    t.integer  "user_id"
+  create_table "subscriber_issues", force: :cascade do |t|
+    t.integer  "subscriber_id"
     t.integer  "issue_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
-  add_index "user_issues", ["issue_id"], name: "index_user_issues_on_issue_id", using: :btree
-  add_index "user_issues", ["user_id"], name: "index_user_issues_on_user_id", using: :btree
+  add_index "subscriber_issues", ["issue_id"], name: "index_subscriber_issues_on_issue_id", using: :btree
+  add_index "subscriber_issues", ["subscriber_id"], name: "index_subscriber_issues_on_subscriber_id", using: :btree
 
-  create_table "users", force: :cascade do |t|
+  create_table "subscribers", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "email",      null: false
     t.integer  "website_id"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20150528180341) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "subscribers", ["email"], name: "index_subscribers_on_email", unique: true, using: :btree
 
   create_table "websites", force: :cascade do |t|
     t.string   "title",      null: false

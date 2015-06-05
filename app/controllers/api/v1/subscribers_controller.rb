@@ -1,7 +1,7 @@
 class Api::V1::UsersController < Api::V1::ApiController
 
   def index
-    @users = current_site.users
+    @subscribers = current_site.subscribers
   end
 
   def create
